@@ -5,7 +5,6 @@ angular.module('angularTable', [])
 		var TableService = {
 			getColors: function() {
 			  var promise = $http.get('data.json').then(function (response) {
-				console.log(response);
 				return response.data;
 			  });
 			  return promise;
@@ -18,7 +17,6 @@ angular.module('angularTable', [])
 		
 		TableService.getColors().then(function(colors) {
 			$scope.colors = colors.colorsArray;
-			console.log($scope.colors);
 		});
 		
 	}])
